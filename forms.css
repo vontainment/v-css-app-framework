@@ -1,0 +1,125 @@
+
+
+/* Base styles for form elements */
+input[type="radio"],
+input[type="checkbox"] {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #66cc33;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #66cc33;
+    padding: 5px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="image"] {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #66cc33;
+}
+
+input[type="date"] {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #66cc33;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Drop shadow */
+    border: 1px solid #66cc33;
+    /* Border color */
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+select > option {
+    padding: 5px;
+    /* Additional padding for options */
+    background-color: #f9fff9;
+    /* Very light green background to match the border color of the select */
+}
+
+/* Labels */
+form>label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+/* Additional adjustments for disabled elements */
+input:disabled,
+textarea:disabled,
+select:disabled,
+button:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+:required {
+    background-color: #f0f8ff;
+    /* Very light blue background for required fields */
+}
+
+:valid {
+    background-color: #e6ffe6;
+    /* Very light green background for valid inputs */
+}
+
+:invalid {
+    background-color: #ffe6e6;
+    /* Very light red background for invalid inputs */
+}
+
+/* Custom styling for different input types or states */
+input[type="submit"],
+input[type="button"],
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    /* Default blue color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    /* Smooth transitions */
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Drop shadow */
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover {
+    opacity: 0.9;
+}
+
+
+/* Green variant */
+.green {
+    background-color: #4caf50;
+}
+
+/* Red variant */
+.red {
+    background-color: #f44336;
+}
+
+/* Orange variant */
+.orange {
+    background-color: #ff9800;
+}
