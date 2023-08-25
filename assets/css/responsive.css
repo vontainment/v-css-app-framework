@@ -5,105 +5,136 @@ main {
   margin: 0 auto;
   padding: 0 15px;
 
-  div, section, article, aside {
+  .container {
+    width: 70%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  .container-centered {
+    width: 50vw;
+    /* 50% of the viewport width */
+    height: 50vh;
+    /* 50% of the viewport height */
+    position: absolute;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #66cc33;
+    transform: translate(-50%, -50%);
+    /* Centering */
+  }
+
+  @media (max-width: 768px) {
+
+    /* Mobile screen */
     .container {
-      width: 70%;
-      margin-left: auto;
-      margin-right: auto;
+      width: 100%;
     }
 
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      margin-left: -15px;
-      margin-right: -15px;
+    /* Mobile screen */
+    .container-centered {
+      width: 100%;
+      margin: 10px;
     }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
 
     /* Alignment classes */
-    .row.right {
+    .right {
       justify-content: flex-end;
     }
 
-    .row.left {
+    .left {
       justify-content: flex-start;
     }
 
-    .row.center {
+    .center {
       justify-content: center;
     }
 
-    .row.spaced {
+    .spaced {
       justify-content: space-between;
     }
+  }
 
-    [class*="col"] {
-      padding: 0 15px;
-      min-height: 1px;
-      flex-basis: 0;
-      flex-grow: 1;
-      max-width: 100%;
-      box-sizing: border-box;
-    }
+  [class*="col"] {
+    padding: 0 15px;
+    min-height: 1px;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    box-sizing: border-box;
 
     /* Mobile styles */
     @media (max-width: 767px) {
-      .col.s1 {
+      .s1 {
         flex: 0 0 8.33333%;
         max-width: 8.33333%;
       }
 
-      .col.s2 {
+      .s2 {
         flex: 0 0 16.66667%;
         max-width: 16.66667%;
       }
 
-      .col.s3 {
+      .s3 {
         flex: 0 0 25%;
         max-width: 25%;
       }
 
-      .col.s4 {
+      .s4 {
         flex: 0 0 33.33333%;
         max-width: 33.33333%;
       }
 
-      .col.s5 {
+      .s5 {
         flex: 0 0 41.66667%;
         max-width: 41.66667%;
       }
 
-      .col.s6 {
+      .s6 {
         flex: 0 0 50%;
         max-width: 50%;
       }
 
-      .col.s7 {
+      .s7 {
         flex: 0 0 58.33333%;
         max-width: 58.33333%;
       }
 
-      .col.s8 {
+      .s8 {
         flex: 0 0 66.66667%;
         max-width: 66.66667%;
       }
 
-      .col.s9 {
+      .s9 {
         flex: 0 0 75%;
         max-width: 75%;
       }
 
-      .col.s10 {
+      .s10 {
         flex: 0 0 83.33333%;
         max-width: 83.33333%;
       }
 
-      .col.s11 {
+      .s11 {
         flex: 0 0 91.66667%;
         max-width: 91.66667%;
       }
 
-      .col.s12 {
+      .s12 {
         flex: 0 0 100%;
         max-width: 100%;
       }
@@ -111,62 +142,62 @@ main {
 
     /* Tablet styles */
     @media (min-width: 768px) and (max-width: 1023px) {
-      .col.m1 {
+      .m1 {
         flex: 0 0 8.33333%;
         max-width: 8.33333%;
       }
 
-      .col.m2 {
+      .m2 {
         flex: 0 0 16.66667%;
         max-width: 16.66667%;
       }
 
-      .col.m3 {
+      .m3 {
         flex: 0 0 25%;
         max-width: 25%;
       }
 
-      .col.m4 {
+      .m4 {
         flex: 0 0 33.33333%;
         max-width: 33.33333%;
       }
 
-      .col.m5 {
+      .m5 {
         flex: 0 0 41.66667%;
         max-width: 41.66667%;
       }
 
-      .col.m6 {
+      .m6 {
         flex: 0 0 50%;
         max-width: 50%;
       }
 
-      .col.m7 {
+      .m7 {
         flex: 0 0 58.33333%;
         max-width: 58.33333%;
       }
 
-      .col.m8 {
+      .m8 {
         flex: 0 0 66.66667%;
         max-width: 66.66667%;
       }
 
-      .col.m9 {
+      .m9 {
         flex: 0 0 75%;
         max-width: 75%;
       }
 
-      .col.m10 {
+      .m10 {
         flex: 0 0 83.33333%;
         max-width: 83.33333%;
       }
 
-      .col.m11 {
+      .m11 {
         flex: 0 0 91.66667%;
         max-width: 91.66667%;
       }
 
-      .col.m12 {
+      .m12 {
         flex: 0 0 100%;
         max-width: 100%;
       }
@@ -174,62 +205,62 @@ main {
 
     /* Desktop styles */
     @media (min-width: 1024px) {
-      .col.l1 {
+      .l1 {
         flex: 0 0 8.33333%;
         max-width: 8.33333%;
       }
 
-      .col.l2 {
+      .l2 {
         flex: 0 0 16.66667%;
         max-width: 16.66667%;
       }
 
-      .col.l3 {
+      .l3 {
         flex: 0 0 25%;
         max-width: 25%;
       }
 
-      .col.l4 {
+      .l4 {
         flex: 0 0 33.33333%;
         max-width: 33.33333%;
       }
 
-      .col.l5 {
+      .l5 {
         flex: 0 0 41.66667%;
         max-width: 41.66667%;
       }
 
-      .col.l6 {
+      .l6 {
         flex: 0 0 50%;
         max-width: 50%;
       }
 
-      .col.l7 {
+      .l7 {
         flex: 0 0 58.33333%;
         max-width: 58.33333%;
       }
 
-      .col.l8 {
+      .l8 {
         flex: 0 0 66.66667%;
         max-width: 66.66667%;
       }
 
-      .col.l9 {
+      .l9 {
         flex: 0 0 75%;
         max-width: 75%;
       }
 
-      .col.l10 {
+      .l10 {
         flex: 0 0 83.33333%;
         max-width: 83.33333%;
       }
 
-      .col.l11 {
+      .l11 {
         flex: 0 0 91.66667%;
         max-width: 91.66667%;
       }
 
-      .col.l12 {
+      .l12 {
         flex: 0 0 100%;
         max-width: 100%;
       }

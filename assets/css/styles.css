@@ -1,0 +1,81 @@
+/* Default styling for HTML and Body */
+html {
+    width: 100%;
+    overflow-x: hidden;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    font-size: calc(1rem + 0.5vw);
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+    -webkit-animation: fadeFromGrayscaleAndBlur 2s ease-in-out;
+    animation: fadeFromGrayscaleAndBlur 2s ease-in-out;
+}
+
+/* Apply a clearfix for floating elements */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    visibility: hidden;
+    transition: opacity 0.5s, transform 0.5s;
+    will-change: opacity, transform;
+    /* For optimization */
+}
+
+section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+@-webkit-keyframes fadeFromGrayscaleAndBlur {
+    0% {
+        -webkit-filter: grayscale(100%) blur(5px);
+        filter: grayscale(100%) blur(5px);
+        /* Full grayscale and blur at the start */
+    }
+
+    50% {
+        -webkit-filter: grayscale(50%) blur(0px);
+        filter: grayscale(50%) blur(0px);
+        /* Reduce grayscale to 50% and remove blur at the midpoint */
+    }
+
+    100% {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+        /* Full color with no blur at the end */
+    }
+}
+
+@keyframes fadeFromGrayscaleAndBlur {
+    0% {
+        -webkit-filter: grayscale(100%) blur(5px);
+        filter: grayscale(100%) blur(5px);
+        /* Full grayscale and blur at the start */
+    }
+
+    50% {
+        -webkit-filter: grayscale(50%) blur(0px);
+        filter: grayscale(50%) blur(0px);
+        /* Reduce grayscale to 50% and remove blur at the midpoint */
+    }
+
+    100% {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+        /* Full color with no blur at the end */
+    }
+}

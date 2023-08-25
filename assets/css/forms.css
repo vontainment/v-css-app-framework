@@ -1,5 +1,3 @@
-
-
 /* Base styles for form elements */
 input[type="radio"],
 input[type="checkbox"] {
@@ -43,7 +41,7 @@ select {
     box-sizing: border-box;
 }
 
-select > option {
+select>option {
     padding: 5px;
     /* Additional padding for options */
     background-color: #f9fff9;
@@ -100,26 +98,25 @@ button {
     text-decoration: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* Drop shadow */
+
+    /* Green variant */
+    .green {
+        background-color: #4caf50;
+    }
+
+    /* Red variant */
+    .red {
+        background-color: #f44336;
+    }
+
+    /* Orange variant */
+    .orange {
+        background-color: #ff9800;
+    }
 }
 
 input[type="submit"]:hover,
 input[type="button"]:hover,
 button:hover {
     opacity: 0.9;
-}
-
-
-/* Green variant */
-.green {
-    background-color: #4caf50;
-}
-
-/* Red variant */
-.red {
-    background-color: #f44336;
-}
-
-/* Orange variant */
-.orange {
-    background-color: #ff9800;
 }

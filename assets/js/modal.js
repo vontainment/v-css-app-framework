@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function () {
 // Config
 const isOpenClass = "modal-is-open";
 const openingClass = "modal-is-opening";
@@ -92,3 +93,5 @@ const getScrollbarWidth = () => {
 const isScrollbarVisible = () => {
     return document.body.scrollHeight > screen.height;
 };
+
+});
