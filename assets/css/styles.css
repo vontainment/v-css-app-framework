@@ -1,21 +1,28 @@
-/* Default styling for HTML and Body */
+/* ================================================
+    BODY/HTML STYLES
+================================================ */
 html {
     width: 100%;
     overflow-x: hidden;
     font-size: 100%;
     box-sizing: border-box;
+    -webkit-animation: fadeFromGrayscaleAndBlur 2s ease-in-out;
+    animation: fadeFromGrayscaleAndBlur 2s ease-in-out;
 }
 
 body {
     width: 100%;
     overflow-x: hidden;
     font-family: Arial, sans-serif;
-    font-size: calc(1rem + 0.5vw);
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
     color: #333;
-    background-color: #fff;
+    background-color: #f1f1f1;
+    background-image: url("/assets/images/background.png");
+    background-repeat: repeat;
     line-height: 1.6;
-    -webkit-animation: fadeFromGrayscaleAndBlur 2s ease-in-out;
-    animation: fadeFromGrayscaleAndBlur 2s ease-in-out;
+
 }
 
 /* Apply a clearfix for floating elements */
@@ -25,6 +32,109 @@ body {
     clear: both;
 }
 
+/* ================================================
+    HEADER/FOOTER STYLES
+================================================ */
+header,
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #ffffff;
+}
+
+header {
+    background-color: #0366d6;
+    border-bottom: 2px solid #66cc33;
+}
+
+.logo img {
+    width: 300px;
+    height: auto;
+}
+
+footer {
+    background-color: #66cc33;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* ================================================
+    LOGIN STYLES
+================================================ */
+#login-box {
+    text-align: center;
+}
+
+#login-box form {
+    text-align: left;
+}
+
+#login-form>label,
+#login-form>button {
+    margin-top: 20px;
+}
+
+#btn-login {
+    width: 50%;
+}
+
+/* ================================================
+    TAB NAV STYLES
+================================================ */
+.tab {
+    background-color: #f1f1f1;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    overflow: hidden;
+}
+
+.tab button {
+    background-color: transparent;
+    color: #66cc33;
+    border: none;
+    border-radius: 4px 4px 0 0;
+    cursor: pointer;
+    float: left;
+    font-size: 1em;
+    outline: none;
+    padding: 14px 16px;
+    transition: 0.3s;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab button.active,
+.tab button:hover {
+    background-color: #ffffff;
+    box-shadow: unset;
+}
+
+.tabcontent {
+    border-top: none;
+    display: none;
+    margin-bottom: 70px;
+}
+
+/* ================================================
+    ERROR STYLES
+================================================ */
+#error-msg {
+    color: #ff0000;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid red;
+    background-color: cornsilk;
+}
+
+/* ================================================
+    CONTENT ANIMATION STYLES
+================================================ */
 section {
     opacity: 0;
     transform: translateY(50px);
